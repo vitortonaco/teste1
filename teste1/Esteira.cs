@@ -9,12 +9,19 @@ namespace teste1
 {
     internal class Esteira
     {
-        float Velocidade = 0.3f;
+        public Esteira(Vector3 velocity)
+        {
+            this.Velocidade = velocity;
+        }
+
+        private Vector3 Velocidade;
+
+        
         public List<Conteiner> Conteiners = new List<Conteiner>();
 
         public void Update(float elapsedTime)
         {
-            Conteiners.ForEach(conteiner => conteiner.Position += new Vector3(elapsedTime*Velocidade,0,0));
+            Conteiners.ForEach(conteiner => conteiner.Position += new Vector3(elapsedTime*Velocidade.X,elapsedTime*Velocidade.Y,elapsedTime*Velocidade.Z));
         }
 
 
