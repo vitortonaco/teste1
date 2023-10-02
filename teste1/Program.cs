@@ -1,8 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-
-
-
 using teste1;
 using System.Numerics;
 using System.ComponentModel;
@@ -22,10 +19,7 @@ while (true)
         break;
      }
 }
-
 var item = new Item(15, 600, "VasoPlanta");
-
-
 try 
 { 
     conteiner.AddItem(item); 
@@ -34,8 +28,11 @@ catch (Exception ex)
 { 
     Console.WriteLine(ex.Message); 
 }
-
 Console.WriteLine($"O volume livre é {conteiner.FreeVolume}");
-
 Console.WriteLine($"O peso livre é {conteiner.FreeWeight}");
+var x = new Vector3(1,3,4);
+var y = new Vector3(-5,4,-3);
+
+var xy =Vector3.Dot(x,y);
+Console.WriteLine(xy);
 

@@ -21,7 +21,7 @@ namespace teste1
 
         public void Update(float elapsedTime)
         {
-            Conteiners.ForEach(conteiner => conteiner.Position += new Vector3(elapsedTime*Velocidade.X,elapsedTime*Velocidade.Y,elapsedTime*Velocidade.Z));
+            Conteiners.ForEach(conteiner => conteiner.Position += elapsedTime*Velocidade);
         }
 
 
